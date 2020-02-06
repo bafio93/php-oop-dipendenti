@@ -1,13 +1,13 @@
 <?php
 // Includo dentro alla struttura le generiche caratteristiche del prodotto:
 include_once 'Dipendente.php';
-// Entro nel dettaglio:
+// Entro nel dettaglio: (non proprio...)
 class Impiegato extends Dipendente {
-    public $sample;
+    public $ufficio;
 
-    function __construct($nome,$cognome,$matricola,$sample){
-        parent::__construct($nome,$cognome,$matricola);
-        $this->sample=$sample;
-    }    
+    function __construct($nome,$cognome,$ufficio){
+        parent::__construct($nome,$cognome);
+        $this->ufficio=$ufficio;
+    }
 };
 ?>

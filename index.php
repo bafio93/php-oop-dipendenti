@@ -9,18 +9,17 @@ include_once "Magazziniere.php";
 include_once "Impiegato.php";
 include_once "Operaio.php";
 // Creo un'istanza di un dipendente:
-$dipendente_1= new Magazziniere("Mario","Rossi","0","Camnago Volta");
-echo "<pre>";
+$dipendente_1= new Magazziniere("Mario","Rossi","Camnago Volta");
+// Visualizzo a schermo le caratteristiche:
 $dipendente_1->matricola = $dipendente_1->genera_matricola();
-var_dump($dipendente_1);
+$dipendente_1->contatto = $dipendente_1->genera_contatto();
 $dipendente_1->stampa_dipendente();
 // Chiamo una funzione che mi calcola lo stipendio:
 try {
     $stipendio_mensile=Dipendente::stipendio(10,40,4);
-    echo "<strong>".$stipendio_mensile."</strong>";
+    echo "<p>Paga mensile: <strong>".$stipendio_mensile."€</strong>.</p>";
 } catch (Exception $e) {
     // echo "Problema: ".$e->getMessage();
     header("Location: error.php");
 }
-echo "</pre>";
 ?>

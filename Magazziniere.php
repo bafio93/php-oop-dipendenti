@@ -6,8 +6,8 @@ class Magazziniere extends Dipendente {
 
     public $magazzino;
 
-    function __construct($nome,$cognome,$matricola,$magazzino){
-        parent::__construct($nome,$cognome,$matricola);
+    function __construct($nome,$cognome,$magazzino){
+        parent::__construct($nome,$cognome);
         $this->magazzino=$magazzino;
     }
 };
