@@ -9,5 +9,9 @@ class Impiegato extends Dipendente {
         parent::__construct($nome,$cognome);
         $this->ufficio=$ufficio;
     }
+
+    function imp(){
+        echo "<p>Lavora nell'ufficio di: ".$this->ufficio."</p>";
+    }
 };
 ?>

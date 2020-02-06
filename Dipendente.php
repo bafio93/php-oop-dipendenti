@@ -23,7 +23,7 @@ class Dipendente {
     }
 
     public static function stipendio($paga_ora,$ora,$settimana){
-        if ((!is_int($paga_ora))||(!is_int($ora))||(!is_int($settimana))) {
+        if ((!is_float($paga_ora))||(!is_int($ora))||(!is_int($settimana))) {
             throw new Exception("Una delle cifre inserite non è un numero!");
         }
         return $paga_ora*$ora*$settimana;

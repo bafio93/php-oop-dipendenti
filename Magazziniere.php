@@ -10,5 +10,9 @@ class Magazziniere extends Dipendente {
         parent::__construct($nome,$cognome);
         $this->magazzino=$magazzino;
     }
+
+    function mag(){
+        echo "<p>Lavora come Magazziniere a: ".$this->magazzino."</p>";
+    }
 };
 ?>

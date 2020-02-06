@@ -9,5 +9,9 @@ class Operaio extends Dipendente {
         parent::__construct($nome,$cognome);
         $this->mansione=$mansione;
     }
+
+    function ope(){
+        echo "<p>Svolge la mansione: ".$this->mansione."</p>";
+    }
 };
 ?>
