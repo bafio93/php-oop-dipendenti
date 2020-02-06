@@ -6,6 +6,14 @@ class Dipendente {
     public $cognome;
     public $matricola;
 
+    function genera_matricola() {
+        return $this->nome[0].$this->cognome[0]."00Dip";
+    }
+
+    function stampa_dipendente() {
+        echo "<p>".$this->nome." ".$this->cognome.", matricola: ".$this->matricola.".</p>";
+    }
+
     public static function stipendio($paga_ora,$ora,$settimana){
         if ((!is_int($paga_ora))||(!is_int($ora))||(!is_int($settimana))) {
             throw new Exception("Una delle cifre inserite non è un numero!");

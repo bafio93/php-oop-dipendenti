@@ -10,6 +10,5 @@ class Magazziniere extends Dipendente {
         parent::__construct($nome,$cognome,$matricola);
         $this->magazzino=$magazzino;
     }
-
 };
 ?>
